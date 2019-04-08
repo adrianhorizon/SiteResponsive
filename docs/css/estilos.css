@@ -298,6 +298,7 @@ div.dropdown-menu.show {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all .2s ease-in-out;
 }
 
 .sub-container-grid:nth-child(3) {
