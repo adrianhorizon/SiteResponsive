@@ -1,0 +1,310 @@
+:root {
+  --colorUnad: #005883;
+  --colorSecondary: #F0B429;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  color: white;
+  margin: 0;
+}
+
+h1 strong {
+  color: var(--colorSecondary);
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.img-style {
+  height: 50px;
+}
+
+.hero {
+  height: 350px;
+  background-color: var(--colorUnad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  object-fit: contain;
+}
+
+.header {
+  background-color: var(--colorUnad);
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+  cursor: pointer;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  height: inherit;
+}
+
+.header ul {
+  display: flex;
+  height: inherit;
+}
+
+.header ul li {
+  height: inherit;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+
+a:hover {
+  color: hsla(0, 0%, 100%, .5);
+}
+
+a.dropdown-item:hover {
+  background-color: var(--colorUnad);
+  color: var(--colorSecondary);
+}
+
+div.dropdown-menu.show {
+  border: none;
+  background-color: var(--colorUnad);
+}
+
+.icon-container {
+  line-height: 2.4;
+}
+
+.container {
+  max-width: 1000px;
+  flex: 1;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--colorSecondary);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
+}
+
+.img-footer {
+  margin-top: 100px;
+  width: 400px;
+  height: auto;
+}
+
+@media screen and (max-width: 1023px) and (orientation:landscape) {
+  .container {
+    height: 20vh !important;
+    padding: 0 1em;
+  }
+
+  .hero {
+    height: 80vh !important;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+
+  h1 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    height: 10vh;
+    padding: 0 1em;
+  }
+
+  .hero {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+
+  .hero-image {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
+
+  .img-style {
+    margin-top: 24px;
+  }
+
+  .burger-button {
+    display: block;
+  }
+
+  .header {
+    display: block;
+    height: auto;
+  }
+
+  .header ul {
+    display: block;
+  }
+
+  .header ul li {
+    height: 50px;
+  }
+
+  .header a {
+    justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: none;
+    margin-bottom: .5em;
+  }
+
+  .header .logo {
+    text-align: center;
+  }
+
+  .menu {
+    position: fixed;
+    background: #F47920;
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+
+  .menu.is-active {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .hero {
+    padding: 2em 1em;
+  }
+}
+
+.container-grid {
+  color: #9e9e9e;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+.sub-container-grid {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sub-container-grid {
+  border-radius: 16px;
+  box-shadow: 0px 6px 15px 6px rgba(36, 37, 38, 0.08);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sub-container-grid:nth-child(3) {
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
