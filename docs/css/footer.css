@@ -1,3 +1,17 @@
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0.8; }
+    50% { opacity:0.6; }
+    100% { opacity:0.4; }
+}
+
 :root {
     --colorUnad: #005883;
     --colorSecondary: #F0B429;
@@ -154,7 +168,8 @@
     background: #980dd9;
 }
 
-.market-center {
+.footer-copyRigth {
+    margin-top: 56px;
     font-size: 16px;
     color: white;
     text-align: center;

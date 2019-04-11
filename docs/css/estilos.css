@@ -19,6 +19,10 @@ h6 {
   font-weight: normal;
 }
 
+h5 {
+  font-size: 15px;
+}
+
 h1 {
   font-size: 32px;
   line-height: 1.5;
@@ -167,6 +171,10 @@ div.dropdown-menu.show {
   h1 {
     display: none !important;
   }
+
+  .img-container-grid {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -261,6 +269,9 @@ div.dropdown-menu.show {
   h1 {
     display: none;
   }
+  .img-container-grid {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -308,4 +319,27 @@ div.dropdown-menu.show {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.typewriter h3 {
+  color: #333;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid var(--colorSecondary);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    color-cursor 1.5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes color-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: var(--colorSecondary) }
 }
